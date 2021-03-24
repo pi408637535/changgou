@@ -3,40 +3,29 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>changgou-parent</artifactId>
+        <artifactId>changgou-service</artifactId>
         <groupId>org.example</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>changgou-service-api</artifactId>
-    <packaging>pom</packaging>
-    <description>
-        对应工程的JavaBean、Feign、以及Hystrix配置，该工程主要对外提供依赖。
-    </description>
-    <modules>
-        <module>changgou-service-goods-api</module>
-    </modules>
+    <artifactId>changgou-service-file</artifactId>
+    <description>文件上传服务</description>
     <properties>
         <maven.compiler.source>10</maven.compiler.source>
         <maven.compiler.target>10</maven.compiler.target>
     </properties>
-
+    <!--依赖包-->
     <dependencies>
-        <!--通用的common-->
+        <dependency>
+            <groupId>net.oschina.zcx7878</groupId>
+            <artifactId>fastdfs-client-java</artifactId>
+            <version>1.27.0.0</version>
+        </dependency>
         <dependency>
             <groupId>org.example</groupId>
             <artifactId>changgou-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-
-        <!--每个工程都有Pojo，都需要用到该包对应的注解-->
-        <dependency>
-            <groupId>javax.persistence</groupId>
-            <artifactId>persistence-api</artifactId>
-            <version>1.0</version>
-            <scope>compile</scope>
-        </dependency>
     </dependencies>
-
 </project>

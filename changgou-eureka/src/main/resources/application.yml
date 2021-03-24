@@ -1,0 +1,7 @@
+server:
+  port: 7001
+
+eureka:
+  client:
+    registerWithEureka: false #是否将自己注册到eureka中
+    fetchRegistry: false #是否从eureka中获取信息
