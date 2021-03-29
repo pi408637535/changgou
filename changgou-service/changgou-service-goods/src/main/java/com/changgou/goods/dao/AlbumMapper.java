@@ -1,4 +1,4 @@
-package com.changgou.dao;
+package com.changgou.goods.dao;
 
 import com.changgou.goods.pojo.Album;
 import tk.mybatis.mapper.common.Mapper;

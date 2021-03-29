@@ -1,4 +1,4 @@
-package com.changgou.service;
+package com.changgou.goods.service;
 
 import com.changgou.goods.pojo.Album;
 import com.github.pagehelper.PageInfo;
@@ -60,4 +60,6 @@ public interface AlbumService {
      * @return
      */
     List<Album> findAll();
+
+
 }

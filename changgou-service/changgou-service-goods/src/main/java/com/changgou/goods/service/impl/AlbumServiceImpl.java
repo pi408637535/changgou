@@ -1,17 +1,20 @@
-package com.changgou.service.impl;
+package com.changgou.goods.service.impl;
 
-import com.changgou.dao.AlbumMapper;
+
+import com.changgou.goods.dao.AlbumMapper;
 import com.changgou.goods.pojo.Album;
-import com.changgou.service.AlbumService;
+import com.changgou.goods.service.AlbumService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
 
-public class AlbumServiceImpl  implements AlbumService {
+@Service
+public class AlbumServiceImpl implements AlbumService {
     @Autowired
     private AlbumMapper albumMapper;
 

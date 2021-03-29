@@ -1,11 +1,10 @@
-package com.changgou.controller;
+package com.changgou.goods.controller;
 
 import com.changgou.goods.pojo.Brand;
-import com.changgou.service.BrandService;
+import com.changgou.goods.service.BrandService;
 import com.github.pagehelper.PageInfo;
 import entity.Result;
 import entity.StatusCode;
-import io.swagger.models.auth.In;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -62,4 +61,13 @@ public class BrandController {
 
         return new Result<>(true,StatusCode.OK,"查询成功", pageInfo);
     }
+
+    @GetMapping("/category/{id}")
+    public Result<List<Brand>> findBrandByCategory(@PathVariable(name="id") Integer id){
+        List<Brand> brandList = brandService.findByCategory(id);
+
+        return new Result<>(true,StatusCode.OK,"查询品牌列表成功",brandList);
+
+    }
+
 }

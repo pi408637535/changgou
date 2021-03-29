@@ -1,11 +1,10 @@
-package com.changgou.service.impl;
+package com.changgou.goods.service.impl;
 
-import com.changgou.dao.BrandMapper;
+import com.changgou.goods.dao.BrandMapper;
 import com.changgou.goods.pojo.Brand;
-import com.changgou.service.BrandService;
+import com.changgou.goods.service.BrandService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import org.apache.commons.lang.ObjectUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -88,5 +87,10 @@ public class BrandServiceImpl implements BrandService {
         PageHelper.startPage(page,size);
         //分页查询
         return new PageInfo<Brand>(brandMapper.selectByExample(example));
+    }
+
+    @Override
+    public List<Brand> findByCategory(Integer categoryId) {
+        return brandMapper.findByCategory(categoryId);
     }
 }

@@ -1,7 +1,7 @@
-package com.changgou.controller;
+package com.changgou.goods.controller;
 
 import com.changgou.goods.pojo.Album;
-import com.changgou.service.AlbumService;
+import com.changgou.goods.service.AlbumService;
 import com.github.pagehelper.PageInfo;
 import entity.Result;
 import entity.StatusCode;
